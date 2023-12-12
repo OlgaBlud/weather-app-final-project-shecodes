@@ -4,40 +4,36 @@
   color: #9aa0a6;
   padding: 20px;
 }
-.weather h1 {
+h1 {
   font-size: 30px;
   font-weight: 100;
   margin: 20px 0 0 0;
 }
 
-.weather ul {
+ul {
   padding: 0;
 }
 
-.weather li {
+li {
   line-height: 19px;
   list-style: none;
 }
-/* .Weather .temperature {
-  font-weight: bold;
-  color: rgb(33, 33, 33);
+.temperature {
+  color: rgb(33, 33, 33, 0.8);
   font-size: 66px;
   line-height: 64px;
-  margin-left: 5px;
   font-weight: 400;
   margin-left: 10px;
-  background-color: red;
 }
 
-.Weather canvas {
-  margin: 10px auto;
+.weather-icon {
+  vertical-align: top;
 }
 
-.Weather .unit {
-  color: rgb(33, 33, 33);
+.unit {
+  color: rgb(33, 33, 33, 0.8);
   font-size: 16px;
   font-weight: 400;
   position: relative;
-  line-height: 1;
   top: -34px;
-} */
+}

@@ -32,6 +32,7 @@ export default function Weather() {
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
             alt="Weather icon"
+            className="weather-icon"
           />
           <span className="temperature">6</span>
           <span className="unit">℃</span>
