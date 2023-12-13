@@ -26,9 +26,12 @@ li {
   margin-left: 10px;
 }
 
-.weather-icon {
+/* .weather-icon {
   vertical-align: top;
-}
+} */
+/* .weather svg {
+  vertical-align: top;
+} */
 
 .unit {
   color: rgb(33, 33, 33, 0.8);
