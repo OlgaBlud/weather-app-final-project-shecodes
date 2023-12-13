@@ -2,6 +2,7 @@
 import axios from "axios";
 import "./Weather.css";
 import { useState } from "react";
+import FormattedDate from "./FormatedDate";
 export default function Weather(props) {
   const [weather, setWeather] = useState({ loaded: false });
   const apiKey = "dfe55254099b96bf9592c69aca42d6f5";
@@ -12,14 +13,14 @@ export default function Weather(props) {
       loaded: true,
       city: response.data.name,
       temperature: Math.round(response.data.main.temp),
-      localTime: "Make new component",
+      localTime: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
 
-    // console.log(response);
+    console.log(response);
   }
 
   if (weather.loaded) {
@@ -46,7 +47,10 @@ export default function Weather(props) {
         </form>
         <h1>{props.defaultCity}</h1>
         <ul>
-          <li>{weather.localTime}</li>
+          <li>
+            <FormattedDate date={weather.localTime} />
+          </li>
+
           <li className="text-capitalize">{weather.description}</li>
         </ul>
         <div className="row">
