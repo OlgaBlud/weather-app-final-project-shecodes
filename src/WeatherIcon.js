@@ -1,7 +1,7 @@
 import React from "react";
 import { WeatherSvg } from "weather-icons-animated";
 export default function WeatherIcon(props) {
-  console.log(props.iconCode);
+  // console.log(props.iconCode);
   const codeMapping = {
     "01d": "sunny",
     "01n": "clear-night",
@@ -28,5 +28,7 @@ export default function WeatherIcon(props) {
   // lightning-rainy
   // windy
   // windy-variant
-  return <WeatherSvg state={codeMapping[props.iconCode]} width="30%" />;
+  return <WeatherSvg state={codeMapping[props.iconCode]} />;
 }
+// https://www.npmjs.com/package/weather-icons-animated
+// https://openweathermap.org/weather-conditions#How-to-get-icon-URL

@@ -4,6 +4,7 @@ import "./Weather.css";
 import { useState } from "react";
 
 import WeatherDetails from "./WeatherDetails";
+import WeatherForecast from "./WeatherForecast";
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weather, setWeather] = useState({ loaded: false });
@@ -61,6 +62,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherDetails weather={weather} />
+        <WeatherForecast />
       </div>
     );
   } else {
@@ -68,3 +70,7 @@ export default function Weather(props) {
     return "Loading...";
   }
 }
+
+// https://www.shecodes.io/demos/react
+// https://meteo-shecodes-app.netlify.app/forecast/
+// https://github.com/wecodeschool/react-weather-app/tree/master

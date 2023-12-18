@@ -13,30 +13,26 @@ export default function WeatherTemperature(props) {
   if (unit === "celsius") {
     return (
       <div>
-        <div className="float-left">
-          <span className="temperature">{props.celsius}</span>
+        <span className="temperature">{props.celsius}</span>
 
-          <span className="unit">
-            ºC |{" "}
-            <a href="/" onClick={showFahrenheit}>
-              ºF
-            </a>
-          </span>
-        </div>
+        <span className="unit">
+          ºC |{" "}
+          <a href="/" className="text-decoration-none" onClick={showFahrenheit}>
+            ºF
+          </a>
+        </span>
       </div>
     );
   } else {
     return (
       <div>
-        <div className="float-left">
-          <span className="temperature">{fahrenheit}</span>
-          <span className="unit">
-            ºF |{" "}
-            <a href="/" onClick={showCelsius}>
-              ºC
-            </a>
-          </span>
-        </div>
+        <span className="temperature">{fahrenheit}</span>
+        <span className="unit">
+          ºF |{" "}
+          <a href="/" className="text-decoration-none" onClick={showCelsius}>
+            ºC
+          </a>
+        </span>
       </div>
     );
   }

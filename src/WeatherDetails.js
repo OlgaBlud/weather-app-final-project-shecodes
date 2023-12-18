@@ -15,24 +15,24 @@ export default function WeatherDetails(props) {
         <li className="text-capitalize">{props.weather.description}</li>
       </ul>
       <div className="row">
-        <div className="col-6">
-          <div className="clear-fix">
-            <div className="float-left">
-              <WeatherIcon
-                iconCode={props.weather.icon}
-                alt={props.weather.description}
-              />
-              {/* <img
+        <div className="col-4 ">
+          <div className="float-left">
+            <WeatherIcon
+              iconCode={props.weather.icon}
+              alt={props.weather.description}
+            />
+            {/* <img
             src={props.weather.iconUrl}
             alt="{props.weather.description}"
             
           /> */}
-
-              <WeatherTemperature celsius={props.weather.temperature} />
-            </div>
           </div>
         </div>
-        <div className="col-6">
+        <div className="col-4 p-0">
+          <WeatherTemperature celsius={props.weather.temperature} />
+        </div>
+
+        <div className="col-4">
           <ul>
             <li>Humidity: {props.weather.humidity} %</li>
             <li>Wind: {props.weather.wind} km/h</li>
